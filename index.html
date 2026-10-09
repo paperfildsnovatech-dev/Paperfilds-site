@@ -1,94 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PaperFilds | Tecnologia além do comum</title>
 
-    <title>PaperFilds</title>
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: white;
-            text-align: center;
-        }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b0a;
+  color: white;
+}
 
-        header {
-            padding: 30px 20px;
-            background: #111;
-            border-bottom: 2px solid #4caf50;
-        }
+header {
+  padding: 28px 15px;
+  background: #111613;
+  border-bottom: 2px solid #36d879;
+  text-align: center;
+}
 
-        h1 {
-            font-size: 42px;
-            margin: 0;
-        }
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0;
+}
 
-        .verde {
-            color: #4caf50;
-        }
+.verde {
+  color: #36d879;
+}
 
-        main {
-            padding: 50px 20px;
-        }
+header p {
+  color: #b8c5bd;
+}
 
-        .botao {
-            display: inline-block;
-            padding: 15px 25px;
-            margin-top: 20px;
-            background: #4caf50;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-        }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 15px;
+  background: #101411;
+}
 
-        .produto {
-            margin: 30px auto;
-            padding: 25px;
-            max-width: 500px;
-            background: #151515;
-            border-radius: 15px;
-        }
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #111;
-            color: #aaa;
-        }
-    </style>
+nav a:hover {
+  color: #36d879;
+}
+
+main {
+  padding: 25px 15px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+.hero p, .descricao {
+  color: #b8c5bd;
+  line-height: 1.7;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #141a16;
+  border: 1px solid #29382e;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+}
+
+.celular {
+  font-size: 55px;
+  margin: 10px;
+}
+
+.card h3 {
+  font-size: 23px;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: #36d879;
+  color: #07140b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: #70f0a1;
+}
+
+.detalhes {
+  margin-top: 35px;
+  padding: 25px;
+  border-radius: 15px;
+  background: #111713;
+  border-left: 4px solid #36d879;
+  scroll-margin-top: 15px;
+}
+
+.detalhes h2 {
+  color: #36d879;
+}
+
+.detalhes li {
+  margin: 12px 0;
+  color: #d5ded8;
+}
+
+.voltar {
+  color: #36d879;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: #111613;
+  color: #9ba89f;
+}
+</style>
 </head>
 
-<body>
+<body id="topo">
 
-    <header>
-        <h1>Paper<span class="verde">Filds</span></h1>
-        <p>Tecnologia além do comum.</p>
-    </header>
+<header>
+  <h1 class="logo">Paper<span class="verde">Filds</span></h1>
+  <p>Tecnologia além do comum.</p>
+</header>
 
-    <main>
+<nav>
+  <a href="#topo">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
+</nav>
 
-        <h2>Bem-vindo à PaperFilds</h2>
+<main>
+  <section class="hero">
+    <h2>O futuro começa aqui.</h2>
+    <p>
+      Smartphones e tecnologia desenvolvidos para
+      ultrapassar limites.
+    </p>
+    <a class="botao" href="#produtos">Explorar produtos</a>
+  </section>
 
-        <p>
-            Smartphones, consoles e tecnologia desenvolvidos
-            para ultrapassar limites.
-        </p>
+  <h2 id="produtos">Nossos smartphones</h2>
 
-        <div class="produto">
-            <h2>PaperFilds M99</h2>
-            <p>Um dos maiores monstros de desempenho da PaperFilds.</p>
-            <a class="botao" href="#">Ver produto</a>
-        </div>
+  <section class="produtos">
 
-    </main>
+    <article class="card">
+      <div class="celular">📱</div>
+      <h3>PaperFilds M99</h3>
+      <p class="descricao">
+        Um monstro de desempenho criado para ultrapassar limites.
+      </p>
+      <a class="botao" href="#detalhes-m99">Ver produto</a>
+    </article>
 
-    <footer>
-        © 2026 PaperFilds
-    </footer>
+    <article class="card">
+      <div class="celular">📖</div>
+      <h3>PaperFilds Z7 Base</h3>
+      <p class="descricao">
+        Um smartphone dobrável que une inovação e praticidade.
+      </p>
+      <a class="botao" href="#detalhes-z7-base">Ver produto</a>
+    </article>
+
+    <article class="card">
+      <div class="celular">📲</div>
+      <h3>PaperFilds Z7 Ultra</h3>
+      <p class="descricao">
+        A experiência dobrável premium da linha Z7.
+      </p>
+      <a class="botao" href="#detalhes-z7-ultra">Ver produto</a>
+    </article>
+
+  </section>
+
+  <section class="detalhes" id="detalhes-m99">
+    <h2>PaperFilds M99</h2>
+    <p>
+      Desempenho extremo e identidade marcante.
+      O M99 representa a busca da PaperFilds por potência.
+    </p>
+    <ul>
+      <li>Categoria: smartphone de alto desempenho</li>
+      <li>Foco: potência e velocidade</li>
+      <li>Linha: M</li>
+    </ul>
+    <a class="voltar" href="#produtos">← Voltar aos produtos</a>
+  </section>
+
+  <section class="detalhes" id="detalhes-z7-base">
+    <h2>PaperFilds Z7 Base</h2>
+    <p>
+      Um dobrável projetado para quem quer inovação
+      e praticidade no dia a dia.
+    </p>
+    <ul>
+      <li>Categoria: smartphone dobrável</li>
+      <li>Versão: Base</li>
+      <li>Linha: Z</li>
+    </ul>
+    <a class="voltar" href="#produtos">← Voltar aos produtos</a>
+  </section>
+
+  <section class="detalhes" id="detalhes-z7-ultra">
+    <h2>PaperFilds Z7 Ultra</h2>
+    <p>
+      A versão Ultra da família Z7, com proposta premium
+      e design dobrável.
+    </p>
+    <ul>
+      <li>Categoria: smartphone dobrável premium</li>
+      <li>Versão: Ultra</li>
+      <li>Linha: Z</li>
+    </ul>
+    <a class="voltar" href="#produtos">← Voltar aos produtos</a>
+  </section>
+
+  <section class="detalhes" id="sobre">
+    <h2>Sobre a PaperFilds</h2>
+    <p>
+      Tecnologia, criatividade e inovação.
+      A PaperFilds desenvolve produtos pensados
+      para ir além do comum.
+    </p>
+    <a class="voltar" href="#topo">↑ Voltar ao início</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 PaperFilds — Tecnologia além do comum.
+</footer>
 
 </body>
 </html>
